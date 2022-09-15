@@ -8,7 +8,8 @@ import numpy as np
 from scipy.interpolate import interp1d
 from scipy import imresize, imsave, fromimage, toimage
 # from matplotlib.pyplot import imread
-from imageio import imread
+# from imageio import imread
+import matplotlib.pyplot as plt 
 
 
 # Util function to match histograms
@@ -83,7 +84,7 @@ def original_color_transform(content, generated, mask=None, hist_match=0, mode='
 
 # util function to load masks
 def load_mask(mask_path, shape):
-    mask = imread(mask_path, mode="L") # Grayscale mask load
+    mask = plt.imread(mask_path, mode="L") # Grayscale mask load
     width, height, _ = shape
     mask = imresize(mask, (width, height), interp='bicubic').astype('float32')
 
