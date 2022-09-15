@@ -6,7 +6,7 @@ import argparse
 import os
 import numpy as np
 from scipy.interpolate import interp1d
-from scipy.misc import imresize, imsave, fromimage, toimage
+from scipy import imresize, imsave, fromimage, toimage
 # from matplotlib.pyplot import imread
 from imageio import imread
 
